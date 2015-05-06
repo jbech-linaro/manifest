@@ -1,37 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="optee" fetch="https://github.com/OP-TEE" />
-  <remote name="arm" fetch="https://github.com/ARM-software" />
-  <remote name="tianocore" fetch="https://github.com/tianocore" />
-  <remote name="linux" fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds" />
+	<remote name="optee" fetch="https://github.com/OP-TEE" />
+	<remote name="arm" fetch="https://github.com/ARM-software" />
+	<remote name="linux" fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds" />
 
-  <!-- OP-TEE users repositories -->
-  <remote name="jbech" fetch="https://github.com/jbech-linaro" />
-  <remote name="jenswi" fetch="https://github.com/jenswi-linaro" />
+	<!-- OP-TEE users repositories -->
+	<remote name="jbech" fetch="https://github.com/jbech-linaro" />
+	<remote name="jenswi" fetch="https://github.com/jenswi-linaro" />
 
-  <default remote="optee" revision="master" />
+	<default remote="optee" revision="master" />
 
-  <!-- OP-TEE gits -->
-  <project path="optee_os" name="optee_os.git" />
-  <project path="optee_client" name="optee_client.git" />
-  <!-- project path="optee_linuxdriver" name="optee_linuxdriver.git" /> -->
-  <project remote="jbech" path="optee_linuxdriver" name="optee_linuxdriver.git" revision="refs/heads/dma_buf_export_update" />
+	<!-- OP-TEE gits -->
+	<project path="optee_os" name="optee_os.git" />
+	<project path="optee_client" name="optee_client.git" />
+	<project path="optee_linuxdriver" name="optee_linuxdriver.git" />
+	<!-- <project remote="jbech" path="optee_linuxdriver" name="optee_linuxdriver.git" revision="refs/heads/dma_buf_export_update" -->
 
-  <!-- ARM gits, FVP -->
-  <!-- <project remote="arm" path="arm-trusted-firmware" name="arm-trusted-firmware.git" /> -->
-  <project remote="jenswi" path="arm-trusted-firmware" name="arm-trusted-firmware.git" revision="7e4d69163cd93ae2e18555749fc5d7a658139e3c" />
+	<!-- ARM gits, FVP -->
+	<!-- <project remote="arm" path="arm-trusted-firmware" name="arm-trusted-firmware.git" /> -->
+	<project remote="jenswi" path="arm-trusted-firmware" name="arm-trusted-firmware.git" revision="7e4d69163cd93ae2e18555749fc5d7a658139e3c" />
 
-  <!-- Tianocore, EDK2 -->
-  <!-- <project remote="tianocore" path="edk2" name="edk2.git" /> -->
-  <project remote="arm" path="edk2" name="edk2.git" revision="refs/tags/v2.1-rc0" />
+	<!-- Tianocore, EDK2 -->
+	<project remote="arm" path="edk2" name="edk2.git" revision="refs/tags/v2.1-rc0" />
 
-  <!-- Linux kernel -->
-  <project remote="linux" path="linux" name="linux.git" revision="refs/tags/v4.1-rc1"/>
+	<!-- Linux kernel -->
+	<project remote="linux" path="linux" name="linux.git" revision="refs/tags/v3.18-rc1"/>
 
-  <!-- Filesystem -->
-  <project remote="jbech" path="gen_rootfs" name="gen_rootfs.git" />
+	<!-- Filesystem -->
+	<project remote="jbech" path="gen_rootfs" name="gen_rootfs.git" />
 
-  <!-- Build -->
-  <project remote="jbech" path="build" name="build.git" />
-
+	<!-- Build -->
+	<project remote="jbech" path="build" name="build.git" />
 </manifest>
