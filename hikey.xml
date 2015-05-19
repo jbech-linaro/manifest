@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="optee" fetch="https://github.com/OP-TEE" />
+	<remote name="arm" fetch="https://github.com/ARM-software" />
+	<remote name="96boards" fetch="https://github.com/96boards" />
+
+	<!-- OP-TEE users repositories -->
+	<remote name="jbech" fetch="https://github.com/jbech-linaro" />
+	<remote name="jerome" fetch="https://github.com/jforissier" />
+	<remote name="vchong" fetch="https://github.com/vchong" />
+	<!-- remote name="jenswi" fetch="https://github.com/jenswi-linaro" /-->
+
+	<!-- xtest -->
+	<remote name="linaro" fetch="ssh://linaro-private.git.linaro.org/srv/linaro-private.git.linaro.org/swg" />
+
+        <!-- strace -->
+        <remote name="sfnet" fetch="git://git.code.sf.net/p/strace" />
+
+	<default remote="optee" revision="master" />
+
+        <!-- strace -->
+        <project remote="sfnet" path="strace" name="code" />
+
+	<!-- xtest -->
+	<project remote="linaro" path="optee_test" name="optee_test" revision="jbech_updates_for_optee_test" />
+
+	<!-- l-loader -->
+	<project remote="96boards" path="l-loader" name="l-loader" revision="hikey" />
+
+        <!-- burn-boot -->
+        <project remote="96boards" path="burn-boot" name="burn-boot" />
+
+	<!-- OP-TEE gits -->
+	<project path="optee_os" name="optee_os" />
+	<project path="optee_client" name="optee_client" />
+	<project path="optee_linuxdriver" name="optee_linuxdriver" />
+	<!-- <project remote="jbech" path="optee_linuxdriver" name="optee_linuxdriver" revision="refs/heads/dma_buf_export_update" -->
+
+	<!-- ARM gits -->
+	<!-- <project remote="arm" path="arm-trusted-firmware" name="arm-trusted-firmware" /> -->
+	<project remote="96boards" path="arm-trusted-firmware" name="arm-trusted-firmware" revision="hikey" />
+
+	<!-- Tianocore, EDK2 -->
+	<project remote="96boards" path="edk2" name="edk2" revision="hikey" />
+
+	<!-- Linux kernel -->
+	<project remote="96boards" path="linux" name="linux" revision="hikey"/>
+
+	<!-- Filesystem -->
+	<project remote="jerome" path="gen_rootfs" name="gen_rootfs" />
+
+	<!-- Build -->
+	<project remote="vchong" path="build" name="build" revision="hikey" />
+</manifest>
