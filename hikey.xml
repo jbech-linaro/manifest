@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 	<remote name="optee" fetch="https://github.com/OP-TEE" />
-	<remote name="arm" fetch="https://github.com/ARM-software" />
+	<!-- remote name="arm" fetch="https://github.com/ARM-software" /-->
 	<remote name="96boards" fetch="https://github.com/96boards" />
 
 	<!-- OP-TEE users repositories -->
@@ -22,10 +22,14 @@
         <project remote="sfnet" path="strace" name="code" />
 
 	<!-- xtest -->
-	<project remote="linaro" path="optee_test" name="optee_test" revision="jbech_updates_for_optee_test" />
+	<!-- project remote="linaro" path="optee_test" name="optee_test" revision="jbech_updates_for_optee_test" /-->
+	<!-- project remote="linaro" path="optee_test" name="optee_test" revision="jf_64bit_fixes" /-->
+	<project remote="linaro" path="optee_test" name="optee_test" revision="jf_hikey" />
 
 	<!-- l-loader -->
-	<project remote="96boards" path="l-loader" name="l-loader" revision="hikey" />
+	<!-- project remote="96boards" path="l-loader" name="l-loader" revision="hikey" /-->
+	<!-- project remote="96boards" path="l-loader" name="l-loader" revision="master" /-->
+	<project remote="jerome" path="l-loader" name="l-loader" revision="hikey" />
 
         <!-- burn-boot -->
         <project remote="96boards" path="burn-boot" name="burn-boot" />
@@ -34,17 +38,19 @@
 	<project path="optee_os" name="optee_os" />
 	<project path="optee_client" name="optee_client" />
 	<project path="optee_linuxdriver" name="optee_linuxdriver" />
-	<!-- <project remote="jbech" path="optee_linuxdriver" name="optee_linuxdriver" revision="refs/heads/dma_buf_export_update" -->
+	<!-- project remote="jbech" path="optee_linuxdriver" name="optee_linuxdriver" revision="refs/heads/dma_buf_export_update" -->
 
 	<!-- ARM gits -->
-	<!-- <project remote="arm" path="arm-trusted-firmware" name="arm-trusted-firmware" /> -->
-	<project remote="96boards" path="arm-trusted-firmware" name="arm-trusted-firmware" revision="hikey" />
+	<!-- project remote="96boards" path="arm-trusted-firmware" name="arm-trusted-firmware" revision="hikey" /-->
+	<project remote="jerome" path="arm-trusted-firmware" name="arm-trusted-firmware" revision="hikey-sec" />
 
 	<!-- Tianocore, EDK2 -->
-	<project remote="96boards" path="edk2" name="edk2" revision="hikey" />
+	<!-- project remote="96boards" path="edk2" name="edk2" revision="hikey" /-->
+	<project remote="jerome" path="edk2" name="edk2" revision="hikey_optee" />
 
 	<!-- Linux kernel -->
-	<project remote="96boards" path="linux" name="linux" revision="hikey"/>
+	<!-- project remote="96boards" path="linux" name="linux" revision="hikey"/ -->
+	<project remote="jerome" path="linux" name="linux" revision="hikey-optee"/>
 
 	<!-- Filesystem -->
 	<project remote="jerome" path="gen_rootfs" name="gen_rootfs" />
