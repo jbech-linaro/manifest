@@ -2,11 +2,8 @@
 <manifest>
   <remote name="optee" fetch="https://github.com/OP-TEE" />
   <remote name="linux" fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds" />
-
-  <!-- OP-TEE users repositories -->
+  <remote name="linaro-swg" fetch="https://github.com/linaro-swg" />
   <remote name="jbech" fetch="https://github.com/jbech-linaro" />
-  <remote name="jenswi" fetch="https://github.com/jenswi-linaro" />
-  <remote name="gregb" fetch="https://git.linaro.org/people/greg.bellows" />
 
   <default remote="optee" revision="master" />
 
@@ -19,11 +16,11 @@
   <!-- Linux kernel -->
   <project remote="linux" path="linux" name="linux.git" revision="refs/tags/v4.1-rc1"/>
 
-  <!-- OP-TEE user gits, QEMU -->
-  <project remote="jbech" path="gen_rootfs" name="gen_rootfs.git" />
-  <project remote="jenswi" path="soc_term" name="soc_term.git" />
-  <project remote="jenswi" path="bios_qemu_tz_arm" name="bios_qemu_tz_arm.git" />
-  <project remote="gregb" path="qemu" name="qemu.git" revision="c00ed157431a4a6e0c4c481ba1c809623cbf908f"/>
+  <!-- linaro-swg gits -->
+  <project remote="linaro-swg" path="gen_rootfs" name="gen_rootfs.git" />
+  <project remote="linaro-swg" path="soc_term" name="soc_term.git" />
+  <project remote="linaro-swg" path="bios_qemu_tz_arm" name="bios_qemu_tz_arm.git" />
+  <project remote="linaro-swg" path="qemu" name="qemu.git" revision="c00ed157431a4a6e0c4c481ba1c809623cbf908f"/>
 
   <!-- Build -->
   <project remote="jbech" path="build" name="build.git" />
