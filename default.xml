@@ -13,6 +13,7 @@
   <project path="optee_client" name="optee_client.git" />
   <!-- project path="optee_linuxdriver" name="optee_linuxdriver.git" /> -->
   <project remote="jbech" path="optee_linuxdriver" name="optee_linuxdriver.git" revision="refs/heads/dma_buf_export_update" />
+  <project path="optee_test" name="optee_test.git" />
 
   <!-- busybox -->
   <project remote="busybox" path="busybox" name="busybox.git" />
