@@ -10,9 +10,6 @@
 	<remote name="jbech" fetch="https://github.com/jbech-linaro" />
 	<remote name="vchong" fetch="https://github.com/vchong" />
 
-	<!-- xtest -->
-	<remote name="linaro" fetch="ssh://linaro-private.git.linaro.org/srv/linaro-private.git.linaro.org/swg" />
-
         <!-- strace -->
         <remote name="sfnet" fetch="git://git.code.sf.net/p/strace" />
 
@@ -20,11 +17,6 @@
 
         <!-- strace -->
         <project remote="sfnet" path="strace" name="code" />
-
-	<!-- xtest -->
-	<!-- project remote="linaro" path="optee_test" name="optee_test" revision="jbech_updates_for_optee_test" /-->
-	<!-- project remote="linaro" path="optee_test" name="optee_test" revision="jf_64bit_fixes" /-->
-	<project remote="linaro" path="optee_test" name="optee_test" revision="jf_hikey" />
 
 	<!-- l-loader -->
 	<!-- project remote="96boards" path="l-loader" name="l-loader" revision="master" /-->
@@ -39,6 +31,7 @@
 	<project path="optee_client" name="optee_client" />
 	<project path="optee_linuxdriver" name="optee_linuxdriver" />
 	<!-- project remote="jbech" path="optee_linuxdriver" name="optee_linuxdriver" revision="refs/heads/dma_buf_export_update" /-->
+	<project path="optee_test" name="optee_test" />
 
 	<!-- busybox -->
 	<project remote="busybox" path="busybox" name="busybox.git" />
