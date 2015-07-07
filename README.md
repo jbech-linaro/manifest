@@ -15,7 +15,7 @@ $ make -f $TARGET.mk
 After running `make` above, run `make run`.
 
 **Hikey**<br>
-After running `make` above, follow the instructions at https://github.com/96boards/documentation/wiki/UEFI#flash-binaries-to-emmc to flash all the required images to and boot the board.
+After running `make` above, follow the instructions at https://github.com/96boards/documentation/wiki/HiKeyUEFI#flash-binaries-to-emmc- to flash all the required images to and boot the board.
 
 Location of files/images mentioned in the link above:
 * ```$HOME/devel/optee/burn-boot/hisi-idt.py```
