@@ -7,7 +7,6 @@
 	<remote name="96boards" fetch="https://github.com/96boards" />
 
 	<!-- OP-TEE users repositories -->
-	<remote name="jbech" fetch="https://github.com/jbech-linaro" />
 	<remote name="vchong" fetch="https://github.com/vchong" />
 
         <!-- strace -->
@@ -30,7 +29,6 @@
 	<project path="optee_os" name="optee_os" />
 	<project path="optee_client" name="optee_client" />
 	<project path="optee_linuxdriver" name="optee_linuxdriver" />
-	<!-- project remote="jbech" path="optee_linuxdriver" name="optee_linuxdriver" revision="refs/heads/dma_buf_export_update" /-->
 	<project path="optee_test" name="optee_test" />
 
 	<!-- busybox -->
