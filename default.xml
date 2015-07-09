@@ -27,5 +27,7 @@
 	<project remote="linaro-swg" path="qemu" name="qemu.git" revision="c00ed157431a4a6e0c4c481ba1c809623cbf908f"/>
 
 	<!-- Build -->
-	<project remote="jbech" path="build" name="build.git" />
+	<project remote="jbech" path="build" name="build.git">
+		<linkfile src="qemu.mk" dest="build/Makefile" />
+	</project>
 </manifest>

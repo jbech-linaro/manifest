@@ -34,5 +34,7 @@
 	<project remote="linaro-swg" path="gen_rootfs" name="gen_rootfs.git" />
 
 	<!-- Build -->
-	<project remote="jbech" path="build" name="build.git" />
+	<project remote="jbech" path="build" name="build.git">
+		<linkfile src="fvp.mk" dest="build/Makefile" />
+	</project>
 </manifest>

@@ -52,5 +52,7 @@
 	<project remote="linaro-swg" path="gen_rootfs" name="gen_rootfs" />
 
 	<!-- Build -->
-	<project remote="vchong" path="build" name="build" revision="hikey" />
+	<project remote="vchong" path="build" name="build.git">
+		<linkfile src="hikey.mk" dest="build/Makefile" />
+	</project>
 </manifest>
