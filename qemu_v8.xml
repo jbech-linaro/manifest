@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="busybox" fetch="git://busybox.net" />
+	<remote name="linaro-swg" fetch="https://github.com/linaro-swg" />
+	<remote name="linux" fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds" />
+	<remote name="optee" fetch="https://github.com/OP-TEE" />
+	<remote name="qemu" fetch="https://github.com/qemu" />
+	<remote name="peter" fetch="https://github.com/pm215" />
+	<remote name="jbech" fetch="https://github.com/jbech-linaro" />
+
+	<default remote="optee" revision="master" />
+
+	<!-- OP-TEE gits -->
+	<project remote = "peter" path="optee_os" name="optee_os.git" revision="refs/heads/qemu-v8-fix-uart" />
+	<project path="optee_client" name="optee_client.git" />
+	<project path="optee_linuxdriver" name="optee_linuxdriver.git" />
+	<project path="optee_test" name="optee_test.git" />
+
+	<!-- busybox -->
+	<project remote="busybox" path="busybox" name="busybox.git" revision="dbf5a6da6a4295ce26edd1ce34fde567d19afa02" />
+
+	<!-- Linux kernel -->
+	<project remote="linux" path="linux" name="linux.git" revision="refs/tags/v4.4"/>
+
+	<!-- linaro-swg gits -->
+	<project remote="linaro-swg" path="gen_rootfs" name="gen_rootfs.git" />
+	<project remote="linaro-swg" path="soc_term" name="soc_term.git" />
+
+	<!-- QEMU -->
+	<project remote="qemu" path="qemu" name="qemu.git" />
+
+	<!-- We're using Peter Maydell's git for ARM-TF until merged officially -->
+	<project remote="peter" path="arm-trusted-firmware" name="arm-trusted-firmware.git" revision="refs/heads/correct-cntfrq" />
+
+	<!-- Build, also temporary until everything sorted out -->
+	<project remote="jbech" path="build" name="build.git" revision="refs/heads/qemu_v8>
+		<linkfile src="qemu_v8.mk" dest="build/Makefile" />
+		<linkfile src="../toolchains/aarch64/bin/aarch64-linux-gnu-gdb" dest="gdb" />
+	</project>
+</manifest>
