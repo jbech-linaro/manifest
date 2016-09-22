@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="git://busybox.net" name="busybox"/>
+  <remote fetch="https://github.com/jbech-linaro" name="jbech"/>
+  <remote fetch="https://github.com/linaro-swg" name="linaro-swg"/>
+  <remote fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds" name="linux"/>
+  <remote fetch="https://github.com/OP-TEE" name="optee"/>
+  <remote fetch="https://github.com/qemu" name="qemu"/>
+  
+  <default remote="optee" revision="master"/>
+  
+  <project name="bios_qemu_tz_arm.git" path="bios_qemu_tz_arm" remote="linaro-swg" revision="a1d0240357f977b51cc530a5e7f67f20e401a5b2" upstream="master"/>
+  <project name="build.git" path="build" remote="jbech" revision="9b84e3da645eb22953c579bbc1f0215c0d61c264" upstream="master">
+    <linkfile dest="build/Makefile" src="qemu.mk"/>
+  </project>
+  <project name="busybox.git" path="busybox" remote="busybox" revision="dbf5a6da6a4295ce26edd1ce34fde567d19afa02"/>
+  <project name="gen_rootfs.git" path="gen_rootfs" remote="linaro-swg" revision="7618525ca98116a75a8524a8a4d5b6cd8f9e2cb6" upstream="master"/>
+  <project name="gp_conf.git" path="gp_conf" remote="jbech" revision="4c12c5b3f8f914e4b97d58f75fafe0e4ceccba17" upstream="master"/>
+  <project name="hello_world.git" path="hello_world" remote="linaro-swg" revision="4725dcc0e02c9e4f131e0d65db6617dfc782f55a" upstream="master"/>
+  <project remote="jbech" path="linux" name="linux.git" revision="245b53aec0cb4116149c7b1e9f674499f6b632f3" />
+  <project name="optee_client.git" path="optee_client" revision="658ae538f76a2624b7f9c40539a600d281d872b4" upstream="master"/>
+  <project name="optee_os.git" path="optee_os" revision="147416cac4a793484b44b053f163aa7b61fdb477" upstream="master"/>
+  <project name="optee_test.git" path="optee_test" revision="f9b7fd287e626cfe434fb65a4d114bfca2fded64" upstream="master"/>
+  <project name="qemu.git" path="qemu" remote="qemu" revision="a008535b9fa396226ff9cf78b8ac5f3584bda58e" upstream="master"/>
+  <project name="soc_term.git" path="soc_term" remote="linaro-swg" revision="5493a6e7c264536f5ca63fe7511e5eed991e4f20" upstream="master"/>
+</manifest>
