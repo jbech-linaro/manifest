@@ -31,8 +31,4 @@
 	<!-- Filesystem -->
 	<project remote="linaro-swg" path="gen_rootfs" name="gen_rootfs.git" />
 
-	<!-- Build -->
-	<project path="build" name="build.git">
-		<linkfile src="fvp.mk" dest="build/Makefile" />
-	</project>
 </manifest>
