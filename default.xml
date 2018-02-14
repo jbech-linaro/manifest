@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="github" fetch="https://github.com" />
+	<remote name="github-private" fetch="ssh://git@github.com" />
+
+	<default remote="github" revision="master" />
+
+	<project remote="github-private" path="trusted-firmware-m" name="ARM-software/trusted-firmware-m.git" revision="tfm-prototype-v0_1" />
+	<project remote="github" path="CMSIS_5" name="ARM-software/CMSIS_5.git" revision="refs/tags/5.2.0" />
+	<project remote="github" path="mbedtls" name="ARMmbed/mbedtls.git" revision="refs/tags/mbedtls-2.5.1" />
+
+	<project remote="github" path="qemu-arm" name="jbech-linaro/qemu" revision="v8m">
+		<linkfile src="run.sh" dest="run.sh" />
+	</project>
+</manifest>
