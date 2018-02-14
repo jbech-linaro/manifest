@@ -11,5 +11,6 @@
 
 	<project remote="github" path="qemu-arm" name="jbech-linaro/qemu" revision="v8m">
 		<linkfile src="run.sh" dest="run.sh" />
+		<linkfile src=".gdbinit" dest=".gdbinit" />
 	</project>
 </manifest>
