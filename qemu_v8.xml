@@ -23,7 +23,7 @@
 	<project remote="linaro-swg" path="optee_examples" name="optee_examples.git" />
 
 	<!-- Linux kernel -->
-	<project remote="linaro-swg" path="linux" name="linux.git" revision="6e954e2f2cbd412f7bc874bb9145f69713194e52">
+	<project remote="linaro-swg" path="linux" name="linux.git" revision="6e954e2f2cbd412f7bc874bb9145f69713194e52" />
 
 	<!-- linaro-swg gits -->
 	<project remote="linaro-swg" path="gen_rootfs" name="gen_rootfs.git" revision="d5429c154fb81fdae75886d505c385b2f0bb7153" />
