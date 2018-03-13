@@ -15,26 +15,26 @@
 	<project path="optee_test" name="optee_test.git" />
 
 	<!-- busybox -->
-	<project remote="busybox" path="busybox" name="busybox.git" revision="refs/tags/1_28_1" clone-depth="1" />
+	<project remote="busybox" path="busybox" name="busybox.git" revision="refs/tags/1_28_1" clone-depth="1" sync-tags="false" />
 
 	<!-- ARM gits, FVP -->
-	<project remote="arm" path="arm-trusted-firmware" name="arm-trusted-firmware.git" revision="refs/tags/v1.5-rc2" />
+	<project remote="arm" path="arm-trusted-firmware" name="arm-trusted-firmware.git" revision="refs/tags/v1.5-rc2" sync-tags="false" />
 
 	<!-- Tianocore, EDK2 -->
-	<project remote="tianocore" path="edk2" name="edk2.git" revision="refs/heads/UDK2018" clone-depth="1" />
-	<project remote="tianocore" path="edk2-platforms" name="edk2-platforms.git" revision="refs/heads/master" clone-depth="1" />
+	<project remote="tianocore" path="edk2" name="edk2.git" revision="refs/heads/UDK2018" clone-depth="1" sync-tags="false" />
+	<project remote="tianocore" path="edk2-platforms" name="edk2-platforms.git" revision="refs/heads/master" clone-depth="1" sync-tags="false" />
 
 	<!-- Linux kernel -->
-	<project remote="linaro-swg" path="linux" name="linux.git" revision="refs/heads/optee" clone-depth="1" />
+	<project remote="linaro-swg" path="linux" name="linux.git" revision="refs/heads/optee" clone-depth="1" sync-tags="false" />
 
 	<!-- Hello world TA -->
 	<project remote="linaro-swg" path="optee_examples" name="optee_examples.git" />
 
 	<!-- Filesystem -->
-	<project remote="linaro-swg" path="gen_rootfs" name="gen_rootfs.git" revision="refs/heads/master" clone-depth="1" />
+	<project remote="linaro-swg" path="gen_rootfs" name="gen_rootfs.git" revision="refs/heads/master" clone-depth="1" sync-tags="false" />
 
 	<!-- Grub -->
-	<project remote="savannah" path="grub" name="grub.git" revision="refs/tags/grub-2.02" clone-depth="1" />
+	<project remote="savannah" path="grub" name="grub.git" revision="refs/tags/grub-2.02" clone-depth="1" sync-tags="false" />
 
 	<!-- Build -->
 	<project path="build" name="build.git">
