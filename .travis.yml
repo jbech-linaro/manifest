@@ -33,13 +33,8 @@ before_install:
 install: true
 
 env:
-  - $REPO_PROJ=default
-  - $REPO_PROJ=fvp
-  - $REPO_PROJ=hikey
-  - $REPO_PROJ=hikey960
-  - $REPO_PROJ=juno
-  - $REPO_PROJ=qemu_v8
-  - $REPO_PROJ=rpi3
+  - $REPO_PROJ=default CACHE_NAME=JOB1
+  - $REPO_PROJ=fvp CACHE_NAME=JOB2
 
 before_script:
   - mkdir -p $HOME/bin
