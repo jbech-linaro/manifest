@@ -20,7 +20,9 @@ git:
   depth: 10
 
 after_script:
+  - export CCACHE_LOGFILE=$HOME/ccache.log
   - ccache -s
+  - cat $CCACHE_LOGFILE
 
 before_install:
   - ccache -s
@@ -36,12 +38,14 @@ env:
   - $REPO_PROJ=fvp CACHE_NAME=JOB2
 
 before_script:
+  - export CCACHE_LOGFILE=$HOME/ccache.log
   - mkdir -p $HOME/bin
   - cd $HOME/bin && wget https://storage.googleapis.com/git-repo-downloads/repo && chmod +x repo
   - export PATH=$HOME/bin:$PATH
   - mkdir -p $HOME/$REPO_PROJ
 
 script:
+  - export CCACHE_LOGFILE=$HOME/ccache.log
   # Special case for FVP, since we check for the Foundation_Platformpkg folder
   # in the makefile.
   - if [ $REPO_PROJ == "fvp" ]; then mkdir -p $HOME/$REPO_PROJ/Foundation_Platformpkg; fi
@@ -55,7 +59,7 @@ script:
                 branch=$TRAVIS_BRANCH
         fi
         echo "Getting ${REPO_PROJ}.xml from https://github.com/$slug using branch $branch"
-        cd $HOME/$REPO_PROJ && repo init -u https://github.com/$slug -b $branch -m ${REPO_PROJ}.xml </dev/null && repo sync -j2 --no-clone-bundle --no-tags --quiet
+        cd $HOME/$REPO_PROJ && repo init -u https://github.com/$slug -b $branch -m ${REPO_PROJ}.xml </dev/null && repo sync -j10 --no-clone-bundle --no-tags --quiet
   # Fetch a local copy of dtc+libfdt to avoid issues with a possibly outdated libfdt-dev
   - if [ $REPO_PROJ == "qemu_v8" ]; then cd $HOME/$REPO_PROJ/qemu && git submodule update --init dtc; fi
   # Dump the content of the manifest (for debug purpose)
