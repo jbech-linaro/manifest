@@ -33,8 +33,9 @@ before_install:
 install: true
 
 env:
-  - $REPO_PROJ=default CACHE_NAME=JOB1
-  - $REPO_PROJ=fvp CACHE_NAME=JOB2
+  #- $REPO_PROJ=default CACHE_NAME=JOB1
+  #- $REPO_PROJ=fvp CACHE_NAME=JOB2
+  - $REPO_PROJ=hikey CACHE_NAME=JOB3
 
 before_script:
   - export CCACHE_BASEDIR=$HOME/.ccache
