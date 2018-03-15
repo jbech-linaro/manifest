@@ -26,7 +26,7 @@
         <project path="busybox"              name="mirror/busybox.git"                    revision="refs/tags/1_24_0" clone-depth="1" />
         <project path="edk2"                 name="96boards-hikey/edk2.git"               revision="2d899728eda95d57f8e9d9bee6cc9b6eefe422b7" />
         <project path="grub"                 name="grub.git"                              revision="refs/tags/grub-2.02" clone-depth="1" remote="savannah" />
-        <project path="l-loader"             name="96boards-hikey/l-loader.git"           revision="refs/tags/96boards-hikey-15.11" clone-depth="1" />
+	<project path="l-loader"             name="96boards-hikey/l-loader.git"           revision="refs/tags/testing/hikey960_v1.2" clone-depth="1" />
         <project path="OpenPlatformPkg"      name="96boards-hikey/OpenPlatformPkg.git"    revision="fbdd4aeee4d8de04d1c332379b20efb7a59a9502" />
         <project path="strace"               name="strace/strace.git"                     revision="refs/tags/v4.21" clone-depth="1" />
 </manifest>
