@@ -21,24 +21,27 @@ git:
 
 after_script:
   - ccache -s
-  - echo $CCACHE_BASEDIR
 
 before_install:
   - ccache -s
   - sudo dpkg --add-architecture i386
   - sudo apt-get update -qq
   # Package list taken from README.md
-  - sudo apt-get install android-tools-adb android-tools-fastboot autoconf automake bc bison build-essential cscope curl device-tree-compiler flex ftp-upload gdisk iasl libattr1-dev libc6:i386 libcap-dev libfdt-dev libftdi-dev libglib2.0-dev libhidapi-dev libncurses5-dev libpixman-1-dev libssl-dev libstdc++6:i386 libtool libz1:i386 make mtools netcat python-crypto python-serial python-wand unzip uuid-dev xdg-utils xterm xz-utils zlib1g-dev
+  - sudo apt-get install -qq -y android-tools-adb android-tools-fastboot autoconf automake bc bison build-essential cscope curl device-tree-compiler flex ftp-upload gdisk iasl libattr1-dev libc6:i386 libcap-dev libfdt-dev libftdi-dev libglib2.0-dev libhidapi-dev libncurses5-dev libpixman-1-dev libssl-dev libstdc++6:i386 libtool libz1:i386 make mtools netcat python-crypto python-serial unzip uuid-dev xdg-utils xterm xz-utils zlib1g-dev
 
 install: true
 
 env:
-  #- $REPO_PROJ=default CACHE_NAME=JOB1
-  #- $REPO_PROJ=fvp CACHE_NAME=JOB2
-  - $REPO_PROJ=hikey CACHE_NAME=JOB3
+  - $REPO_PROJ=default
+  - $REPO_PROJ=fvp
+  - $REPO_PROJ=hikey
+  - $REPO_PROJ=hikey960
+  - $REPO_PROJ=juno
+  - $REPO_PROJ=qemu_v8
+  - $REPO_PROJ=rpi3
 
 before_script:
-  - export CCACHE_BASEDIR=$HOME/.ccache
+  - export CCACHE_BASEDIR=$HOME/$REPO_PROJ
   - export CCACHE_NOHASHDIR=1
   - mkdir -p $HOME/bin
   - cd $HOME/bin && wget https://storage.googleapis.com/git-repo-downloads/repo && chmod +x repo
@@ -59,7 +62,7 @@ script:
                 branch=$TRAVIS_BRANCH
         fi
         echo "Getting ${REPO_PROJ}.xml from https://github.com/$slug using branch $branch"
-        cd $HOME/$REPO_PROJ && repo init -u https://github.com/$slug --depth=1 -b $branch -m ${REPO_PROJ}.xml </dev/null && repo sync -j10 --no-clone-bundle --no-tags --quiet
+        cd $HOME/$REPO_PROJ && repo init -u https://github.com/$slug -b $branch -m ${REPO_PROJ}.xml </dev/null && repo sync -j10 --no-clone-bundle --no-tags --quiet
   # Fetch a local copy of dtc+libfdt to avoid issues with a possibly outdated libfdt-dev
   - if [ $REPO_PROJ == "qemu_v8" ]; then cd $HOME/$REPO_PROJ/qemu && git submodule update --init dtc; fi
   # Dump the content of the manifest (for debug purpose)
