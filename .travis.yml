@@ -12,9 +12,7 @@ notifications:
 dist: trusty
 sudo: required
 
-cache:
-  directories:
-    - $HOME/.ccache
+cache: ccache
 
 git:
   depth: 10
@@ -23,7 +21,7 @@ after_script:
   - ccache -s
 
 before_install:
-  - ccache -s
+  - ccache -s -z
   - sudo dpkg --add-architecture i386
   - sudo apt-get update -qq
   # Package list taken from README.md
@@ -33,12 +31,7 @@ install: true
 
 env:
   - $REPO_PROJ=default
-  - $REPO_PROJ=fvp
-  - $REPO_PROJ=hikey
-  - $REPO_PROJ=hikey960
-  - $REPO_PROJ=juno
   - $REPO_PROJ=qemu_v8
-  - $REPO_PROJ=rpi3
 
 before_script:
   - export CCACHE_BASEDIR=$HOME/$REPO_PROJ
