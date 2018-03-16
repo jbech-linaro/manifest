@@ -62,46 +62,46 @@ env:
   #- PLATFORM=d02 CFG_ARM64_core=y
   - PLATFORM=hikey
   #- PLATFORM=hikey CFG_ARM64_core=y
-  #  - PLATFORM=hikey-hikey960
-  #  #- PLATFORM=hikey-hikey960 CFG_ARM64_core=y
-  #  #- PLATFORM=hikey-hikey960 CFG_SECURE_DATA_PATH=n
-  #  - PLATFORM=imx-mx6dlsabresd
-  #  - PLATFORM=imx-mx6qsabrelite
-  #  - PLATFORM=imx-mx6qsabresd
-  #  - PLATFORM=imx-mx6sxsabreauto
-  #  #- PLATFORM=imx-mx6ulevk ARCH=arm CFG_PAGEABLE_ADDR=0 CFG_NS_ENTRY_ADDR=0x80800000 CFG_DT_ADDR=0x83000000 CFG_DT=y DEBUG=y CFG_TEE_CORE_LOG_LEVEL=4
-  #  #- PLATFORM=imx-mx6ullevk ARCH=arm CFG_PAGEABLE_ADDR=0 CFG_NS_ENTRY_ADDR=0x80800000 CFG_DT=y DEBUG=y CFG_TEE_CORE_LOG_LEVEL=4
-  #  - PLATFORM=imx-mx7dsabresd
-  #  #- PLATFORM=ls-ls1012ardb CFG_ARM64_core=y
-  #  - PLATFORM=ls-ls1021aqds
-  #  - PLATFORM=ls-ls1021atwr
-  #  #- PLATFORM=ls-ls1043ardb CFG_ARM64_core=y
-  #  #- PLATFORM=ls-ls1046ardb CFG_ARM64_core=y
-  #  - PLATFORM=marvell-armada3700
-  #  - PLATFORM=marvell-armada7k8k
-  #  #- PLATFORM=mediatek-mt8173 CFG_ARM64_core=y
-  #  - PLATFORM=poplar
-  #  #- PLATFORM=poplar CFG_ARM64_core=y
-  #  - PLATFORM=rcar
-  #  #- PLATFORM=rcar CFG_ARM64_core=y
-  #  - PLATFORM=rockchip-rk322x
-  #  - PLATFORM=rpi3
-  #  #- PLATFORM=rpi3 CFG_ARM64_core=y
-  #  - PLATFORM=sam
-  #  - PLATFORM=sprd-sc9860
-  #  #- PLATFORM=sprd-sc9860 CFG_ARM64_core=y
-  #  - PLATFORM=stm-b2260
-  #  - PLATFORM=stm-cannes
-  #  - PLATFORM=ti-am43xx
-  #  - PLATFORM=ti-am57xx
-  #  - PLATFORM=ti-dra7xx
-  #  - PLATFORM=vexpress-fvp
-  #  #- PLATFORM=vexpress-fvp CFG_ARM64_core=y
-  #  - PLATFORM=vexpress-juno
-  #  #- PLATFORM=vexpress-juno CFG_ARM64_core=y
-  #  - PLATFORM=zynq7k-zc702
-  #  - PLATFORM=zynqmp-zcu102
-  #  #- PLATFORM=zynqmp-zcu102 CFG_ARM64_core=y
+  - PLATFORM=hikey-hikey960
+  #- PLATFORM=hikey-hikey960 CFG_ARM64_core=y
+  #- PLATFORM=hikey-hikey960 CFG_SECURE_DATA_PATH=n
+  - PLATFORM=imx-mx6dlsabresd
+  - PLATFORM=imx-mx6qsabrelite
+  - PLATFORM=imx-mx6qsabresd
+  - PLATFORM=imx-mx6sxsabreauto
+  #- PLATFORM=imx-mx6ulevk ARCH=arm CFG_PAGEABLE_ADDR=0 CFG_NS_ENTRY_ADDR=0x80800000 CFG_DT_ADDR=0x83000000 CFG_DT=y DEBUG=y CFG_TEE_CORE_LOG_LEVEL=4
+  #- PLATFORM=imx-mx6ullevk ARCH=arm CFG_PAGEABLE_ADDR=0 CFG_NS_ENTRY_ADDR=0x80800000 CFG_DT=y DEBUG=y CFG_TEE_CORE_LOG_LEVEL=4
+  - PLATFORM=imx-mx7dsabresd
+  #- PLATFORM=ls-ls1012ardb CFG_ARM64_core=y
+  - PLATFORM=ls-ls1021aqds
+  - PLATFORM=ls-ls1021atwr
+  #- PLATFORM=ls-ls1043ardb CFG_ARM64_core=y
+  #- PLATFORM=ls-ls1046ardb CFG_ARM64_core=y
+  - PLATFORM=marvell-armada3700
+  - PLATFORM=marvell-armada7k8k
+  #- PLATFORM=mediatek-mt8173 CFG_ARM64_core=y
+  - PLATFORM=poplar
+  #- PLATFORM=poplar CFG_ARM64_core=y
+  - PLATFORM=rcar
+  #- PLATFORM=rcar CFG_ARM64_core=y
+  - PLATFORM=rockchip-rk322x
+  - PLATFORM=rpi3
+  #- PLATFORM=rpi3 CFG_ARM64_core=y
+  - PLATFORM=sam
+  - PLATFORM=sprd-sc9860
+  #- PLATFORM=sprd-sc9860 CFG_ARM64_core=y
+  - PLATFORM=stm-b2260
+  - PLATFORM=stm-cannes
+  - PLATFORM=ti-am43xx
+  - PLATFORM=ti-am57xx
+  - PLATFORM=ti-dra7xx
+  - PLATFORM=vexpress-fvp
+  #- PLATFORM=vexpress-fvp CFG_ARM64_core=y
+  - PLATFORM=vexpress-juno
+  #- PLATFORM=vexpress-juno CFG_ARM64_core=y
+  - PLATFORM=zynq7k-zc702
+  - PLATFORM=zynqmp-zcu102
+  #- PLATFORM=zynqmp-zcu102 CFG_ARM64_core=y
 
 
 before_install:
