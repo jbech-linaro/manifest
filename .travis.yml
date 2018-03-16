@@ -122,7 +122,7 @@ script:
   - export CCACHE_BASEDIR=$HOME/optee_os
   - export CROSS_COMPILE32="ccache arm-linux-gnueabihf-"
   - export CROSS_COMPILE64="ccache aarch64-linux-gnu-"
-  - make -s -j `nproc`
+  - make -s -j `nproc` PLATFORM=$PLATFORM
 
 after_script:
   - ccache -s
