@@ -1,6 +1,6 @@
 # Travis configuration file for downloading and building OP-TEE according to the
 # instructions in build.git
-language: bash
+language: c
 
 notifications:
   email:
