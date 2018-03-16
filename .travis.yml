@@ -32,6 +32,7 @@ addons:
       - device-tree-compiler
       - flex
       - ftp-upload
+      - gcc-arm-linux-gnueabihf
       - gdisk
       - iasl
       - libattr1-dev
