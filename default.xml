@@ -2,14 +2,17 @@
 <manifest>
 	<remote name="jbech" fetch="https://github.com/jbech-linaro" />
 	<remote name="linaro-swg" fetch="https://github.com/linaro-swg" />
+	<remote name="github" fetch="https://github.com/OP-TEE" />
 
 	<default remote="jbech" revision="cmake_optee" />
 
 	<!-- OP-TEE gits -->
-	<project path="optee_os" name="optee_os.git" />
-	<project path="optee_client" name="optee_client.git" />
-	<project path="optee_test" name="optee_test.git" />
-	<project path="optee_examples" name="optee_examples.git" revision="cmake_optee" />
+	<project path="optee_os" name="optee_os.git" remote="github" revision="master" />
+	<project path="optee_client" name="optee_client.git" remote="github" revision="master" />
+	<project path="optee_test" name="optee_test.git" remote="github" revision="master" />
+	<!--
+	<project path="optee_examples" name="optee_examples.git" remote="github" revision="master" />
+	-->
 
 	<!-- Build -->
 	<project path="build" name="build.git">
