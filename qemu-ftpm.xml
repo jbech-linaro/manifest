@@ -5,15 +5,16 @@
   <default remote="github" revision="master"/>
   
   <project name="ARM-software/arm-trusted-firmware.git" path="arm-trusted-firmware" revision="34efb683e32254b8c325ac3071c5776d243a7b99"/>
-  <project name="jbech-linaro/build.git" path="build" revision="17a89f7ab4130590701f2b22966ae3f809fb49a3" upstream="master">
+  <project name="jbech-linaro/build.git" path="build" revision="14e8e3ab302098e043991458067292c337c0149c" upstream="optee-ftpm">
     <linkfile dest="build/Makefile" src="qemu.mk"/>
   </project>
   <project name="OP-TEE/optee_client.git" path="optee_client" revision="34d4375ab4460ad3af83c0af8ff35d6b391b75b3" upstream="master"/>
   <project name="OP-TEE/optee_os.git" path="optee_os" revision="46bd5aef4ff6daa66afcb4a8de5d5afabef01fa1" upstream="master"/>
   <project name="OP-TEE/optee_test.git" path="optee_test" revision="895c5caa9070a134bc12acdc6d0ad0354aa1f644" upstream="master"/>
   <project clone-depth="1" name="buildroot/buildroot.git" path="buildroot" revision="339d550e92ac15de8668f32d66d16f198137006c" upstream="refs/tags/2018.08"/>
-  <project name="jbech-linaro/linux.git" path="linux" revision="1a47620a51ce99a52fd7707759ec7723179443a4"/>
-  <project name="jbech-linaro/ms-tpm-20-ref.git" path="ms-tpm-20-ref"  revision="c23123d231982bc262b4e121ca6af43319079747"/>
+  <project name="jbech-linaro/linux.git" path="linux" revision="81531a35c56add3eebe80f20e2f865275b264d59"/>
+  <project name="jbech-linaro/ms-tpm-20-ref.git" path="ms-tpm-20-ref"  revision="2454dabf3dc8d46908bf8035faa0b2905e7b8530" upstream="ftpm"/>
+  <project name="jbech-linaro/ibmtpm20tss.git" path="ibmtpm20tss" revision="44bcc16816abae86c7780884f8380a7133f97781" upstream="ftpm" />
   <project name="linaro-swg/optee_benchmark.git" path="optee_benchmark" revision="f0d3263d605d401e9771154ec80c1882ca8abca5" upstream="master"/>
   <project name="linaro-swg/optee_examples.git" path="optee_examples" revision="9890a50d3c26b377dcb27f5db680018e15a5a3de" upstream="master"/>
   <project name="linaro-swg/soc_term.git" path="soc_term" revision="5493a6e7c264536f5ca63fe7511e5eed991e4f20"/>
