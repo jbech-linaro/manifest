@@ -15,13 +15,13 @@
         </project>
 
         <!-- linaro-swg gits -->
-        <project path="linux"                name="linaro-swg/linux.git"                  revision="rpi3-optee-4.14" clone-depth="1" />
+        <project path="linux"                name="jbech-linaro/linux.git"                revision="rpi-4.19.y" clone-depth="5" />
         <project path="optee_benchmark"      name="linaro-swg/optee_benchmark.git"/>
         <project path="optee_examples"       name="linaro-swg/optee_examples.git" />
 
         <!-- Misc gits -->
-        <project path="buildroot"            name="buildroot/buildroot.git"               revision="95942f5fcd35d783a49adce621ccf33480f1c88c" />
-        <project path="firmware"             name="raspberrypi/firmware.git"              revision="refs/tags/1.20190401" clone-depth="1" />
+        <project path="buildroot"            name="jbech-linaro/buildroot.git"            revision="rpi-4.19.y" />
+        <project path="firmware"             name="raspberrypi/firmware.git"              revision="dd8cbec5a6d27090e5eb080e13d83c35fdd759f7" />
         <project path="trusted-firmware-a"   name="TF-A/trusted-firmware-a.git"           revision="refs/tags/v2.2" clone-depth="1" remote="tfo"/>
         <project path="u-boot"               name="u-boot/u-boot.git"                     revision="aac0c29d4b8418c5c78b552070ffeda022b16949" />
 </manifest>
