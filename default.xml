@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+        <remote name="github" fetch="https://github.com" />
+        <remote name="tfo"    fetch="https://git.trustedfirmware.org" />
+	<remote name="ca"     fetch="https://source.codeaurora.org/external/imx" />
+
+        <default remote="github" revision="master" />
+
+	<project path="linux"                name="linux-imx.git"                         revision="refs/tags/rel_imx_5.4.24_2.1.0"         clone-depth="1" remote="ca" />
+        <project path="u-boot"               name="uboot-imx.git"                         revision="refs/tags/rel_imx_4.9.123_2.3.0_8mm_ga" clone-depth="1" remote="ca" />
+	<project path="imx-mkimage"          name="imx-mkimage.git"                       revision="refs/tags/rel_imx_5.4.24_2.1.0"         clone-depth="1" remote="ca" />
+	<project path="trusted-firmware-a"   name="TF-A/trusted-firmware-a.git"                                                                             remote="tfo" />
+        <project path="build"               name="jbech-linaro/build.git" 		  revision="imx8mqevk" >
+                <linkfile src="Makefile" dest="Makefile" />
+                <linkfile src="toolchain.mk" dest="toolchain.mk" />
+        </project>
+
+	<!-- OP-TEE gits
+        <project path="optee_client"        name="OP-TEE/optee_client.git" />
+        <project path="optee_os"            name="OP-TEE/optee_os.git" />
+        <project path="optee_test"          name="OP-TEE/optee_test.git" />
+        <project path="optee_benchmark"      name="linaro-swg/optee_benchmark.git" />
+        <project path="optee_examples"       name="linaro-swg/optee_examples.git" />
+        <project path="soc_term"             name="linaro-swg/soc_term.git"               revision="5493a6e7c264536f5ca63fe7511e5eed991e4f20" />
+	-->
+
+
+	<!-- Misc gits
+        <project path="buildroot"            name="buildroot/buildroot.git"               revision="95942f5fcd35d783a49adce621ccf33480f1c88c" />
+        <project path="qemu"                 name="qemu/qemu.git"                         revision="refs/tags/v5.0.0" clone-depth="1" />
+	-->
+</manifest>
