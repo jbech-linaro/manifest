@@ -14,6 +14,7 @@
                 <linkfile src="Makefile" dest="Makefile" />
                 <linkfile src="toolchain.mk" dest="toolchain.mk" />
         </project>
+        <project path="buildroot"            name="buildroot/buildroot.git"               revision="607215cd91ca524981e87b373fc812f49f667455" />
 
 	<!-- OP-TEE gits
         <project path="optee_client"        name="OP-TEE/optee_client.git" />
@@ -26,7 +27,6 @@
 
 
 	<!-- Misc gits
-        <project path="buildroot"            name="buildroot/buildroot.git"               revision="95942f5fcd35d783a49adce621ccf33480f1c88c" />
         <project path="qemu"                 name="qemu/qemu.git"                         revision="refs/tags/v5.0.0" clone-depth="1" />
 	-->
 </manifest>
