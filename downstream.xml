@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+        <remote name="github" fetch="https://github.com" />
+        <remote name="tfo"    fetch="https://git.trustedfirmware.org" />
+        <remote name="ca"     fetch="https://source.codeaurora.org/external/imx" />
+
+        <default remote="github" revision="master" />
+
+        <project path="linux"                name="linux-imx.git"                         revision="refs/tags/rel_imx_5.4.24_2.1.0"         clone-depth="1" remote="ca" />
+        <project path="u-boot"               name="uboot-imx.git"                         revision="refs/tags/rel_imx_4.9.123_2.3.0_8mm_ga" clone-depth="1" remote="ca" />
+        <project path="imx-mkimage"          name="imx-mkimage.git"                       revision="refs/tags/rel_imx_5.4.24_2.1.0"         clone-depth="1" remote="ca" />
+        <project path="trusted-firmware-a"   name="TF-A/trusted-firmware-a.git"                                                                             remote="tfo" />
+        <project path="build"                name="jbech-linaro/build.git"                revision="imx8mqevk-downstream" >
+                <linkfile src="Makefile" dest="Makefile" />
+                <linkfile src="toolchain.mk" dest="toolchain.mk" />
+        </project>
+        <project path="buildroot"            name="buildroot/buildroot.git"               revision="607215cd91ca524981e87b373fc812f49f667455" />
+</manifest>
