@@ -6,8 +6,8 @@
 
         <default remote="github" revision="master" />
 
-        <project path="linux"                name="linux-imx.git"                 revision="refs/tags/v5.9-rc3"                        clone-depth="1" />
-        <project path="u-boot"               name="uboot-imx.git"                 revision="refs/tags/v2020.10-rc2"                    clone-depth="1" />
+        <project path="linux"                name="torvalds/linux.git"            revision="refs/tags/v5.9-rc3"                        clone-depth="1" />
+        <project path="u-boot"               name="u-boot/u-boot"                 revision="refs/tags/v2020.10-rc2"                    clone-depth="1" />
         <project path="imx-mkimage"          name="imx-mkimage.git"               revision="refs/tags/rel_imx_5.4.24_2.1.0"            clone-depth="1" remote="ca" />
         <project path="trusted-firmware-a"   name="TF-A/trusted-firmware-a.git"                                                                        remote="tfo" />
         <project path="build"                name="jbech-linaro/build.git"        revision="imx8mqevk" >
