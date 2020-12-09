@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://github.com" name="github"/>
+  <remote fetch="https://git.trustedfirmware.org" name="tfo"/>
+  <remote fetch="https://gitlab.denx.de/u-boot" name="u-boot"/>
+  
+  <default remote="github" revision="master"/>
+  
+  <project dest-branch="master" name="OP-TEE/build.git" path="build" revision="a32b9b90062f79c88fcb790a8bb46ac1d90a7d20" upstream="master">
+    <linkfile dest="build/Makefile" src="qemu.mk"/>
+  </project>
+  <project dest-branch="master" name="OP-TEE/optee_client.git" path="optee_client" revision="3f44b870299514ad8c6b7dee776eb2994d9c1cd4" upstream="master"/>
+  <project dest-branch="master" name="OP-TEE/optee_os.git" path="optee_os" revision="37a371186eff29e2777c9aa25fecc813e5948209" upstream="master"/>
+  <project dest-branch="master" name="OP-TEE/optee_test.git" path="optee_test" revision="ab553aaff7fae31a3218ee634f4e8a72ccd9c99d" upstream="master"/>
+  <project dest-branch="refs/tags/v2.3" name="TF-A/trusted-firmware-a.git" path="trusted-firmware-a" remote="tfo" revision="8ff55a9e14a23d7c7f89f52465bcc6307850aa33" upstream="refs/tags/v2.3"/>
+  <project clone-depth="1" dest-branch="refs/tags/2020.08" name="buildroot/buildroot.git" path="buildroot" revision="95942f5fcd35d783a49adce621ccf33480f1c88c" upstream="refs/tags/2020.08"/>
+  <project clone-depth="1" dest-branch="optee" name="linaro-swg/linux.git" path="linux" revision="28676a5aba66dc983023ac3bea45e2aa9a06f5ce" upstream="optee"/>
+  <project dest-branch="master" name="linaro-swg/optee_benchmark.git" path="optee_benchmark" revision="875be7f1959f19ed601ef37501f1cf0bfbee9da4" upstream="master"/>
+  <project dest-branch="master" name="linaro-swg/optee_examples.git" path="optee_examples" revision="9a7dc598591990349d88b4dba3a37aadd6851295" upstream="master"/>
+  <project dest-branch="master" name="linaro-swg/soc_term.git" path="soc_term" revision="5ac0645575bff3df26ca55c717bcde4b4c913d87" upstream="master"/>
+  <project clone-depth="1" dest-branch="refs/tags/v5.1.0" name="qemu/qemu.git" path="qemu" revision="d0ed6a69d399ae193959225cdeaa9382746c91cc" upstream="refs/tags/v5.1.0"/>
+  <project clone-depth="1" dest-branch="refs/tags/v2020.04" name="u-boot.git" path="u-boot" remote="u-boot" revision="36fec02b1f90b92cf51ec531564f9284eae27ab4" upstream="refs/tags/v2020.04"/>
+</manifest>
