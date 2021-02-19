@@ -5,9 +5,10 @@
         <default remote="github" revision="master" />
 
 	<project path="buildroot" name="buildroot/buildroot.git"    revision="refs/tags/2020.08.2"    clone-depth="1" />
+	<project path="grub2"     name="rhboot/grub2.git"           revision="refs/tags/grub-2.04"    clone-depth="1" />
         <project path="linux"     name="torvalds/linux.git"         revision="refs/tags/v5.9"         clone-depth="1" />
-        <project path="qemu"      name="qemu/qemu.git"              revision="refs/tags/v5.1.0"                       />
-        <project path="u-boot"    name="u-boot/u-boot.git"          revision="refs/tags/v2020.10-rc5"                 />
+        <project path="qemu"      name="qemu/qemu.git"              revision="refs/tags/v5.1.0"       clone-depth="1" />
+        <project path="u-boot"    name="u-boot/u-boot.git"          revision="refs/tags/v2020.10-rc5" clone-depth="1" />
 
 	<project path="build"     name="jbech-linaro/build.git"     revision="dte">
                 <linkfile src="Makefile"       dest="Makefile" />
