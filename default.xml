@@ -8,6 +8,8 @@
         <remote name="yocto"                    fetch="https://git.yoctoproject.org" />
         <remote name="oe"                       fetch="https://git.openembedded.org" />
         <remote name="arm"                      fetch="https://git.gitlab.arm.com" />
+        <remote name="u-boot"                   fetch="https://source.denx.de/u-boot" />
+        <remote name="xenbits"                  fetch="https://xenbits.xen.org" />
 
         <default remote="github"                revision="master" />
 
@@ -47,10 +49,11 @@
         <project path="meta-clang"              name="kraj/meta-clang"            />
         <project path="meta-raspberrypi"        name="agherzan/meta-raspberrypi"  />
         <project path="meta-secure-core"        name="Wind-River/meta-secure-core" />
+        <project path="ms-tpm-20-ref"           name="microsoft/ms-tpm-20-ref"                         revision="main"/>
         <project path="ntl"                     name="libntl/ntl.git"                                  revision="main" />
         <project path="OpenPlatformPkg"         name="96boards-hikey/OpenPlatformPkg.git" />
         <project path="qemu"                    name="qemu/qemu.git" />
-        <project path="u-boot"                  name="u-boot/u-boot.git" />
+        <project path="optee_rust"              name="apache/incubator-teaclave-trustzone-sdk.git" />
 
         <!-- Misc GitLab remotes -->
         <project path="ci"                      name="Linaro/blueprints/ci.git"                        remote="gitlab" revision="main" />
@@ -58,6 +61,7 @@
         <project path="meta-ewaol"              name="soafee/ewaol/meta-ewaol.git"                     remote="gitlab" revision="main" />
         <project path="meta-ledge-secure"       name="Linaro/trustedsubstrate/meta-ledge-secure.git"   remote="gitlab" revision="kirkstone" />
         <project path="meta-ts"                 name="Linaro/trustedsubstrate/meta-ts.git"             remote="gitlab" />
+        <project path="SCP-firmware"            name="firmware/SCP-firmware.git"                       remote="arm"    revision="main" />
         <project path="trs"                     name="Linaro/trusted-reference-stack/trs.git"          remote="gitlab" revision="main" />
 
         <!-- Misc other remotes -->
@@ -70,4 +74,6 @@
         <project path="meta-virtualization"     name="git/meta-virtualization"                         remote="yocto" />
         <project path="meta-selinux"            name="git/meta-selinux"                                remote="yocto" />
         <project path="meta-security"           name="git/meta-security"                               remote="yocto" />
+        <project path="u-boot"                  name="u-boot.git"                                      remote="u-boot" />
+        <project path="xen"                     name="git-http/xen.git"                                remote="xenbits" />
 </manifest>
