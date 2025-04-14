@@ -66,7 +66,7 @@
 
         <!-- Misc other remotes -->
         <project path="grub"                    name="grub.git"                                        remote="savannah" />
-        <project path="trusted-firmware-m"      name="trusted-firmware-m.git"                          remote="review-tf" />
+        <project path="trusted-firmware-m"      name="TF-M/trusted-firmware-m.git"                     remote="review-tf" />
         <project path="trusted-firmware-a"      name="TF-A/trusted-firmware-a.git"                     remote="tf" />
         <project path="meta-openembedded"       name="meta-openembedded"                               remote="oe" />
         <project path="poky"                    name="git/poky"                                        remote="yocto" />
